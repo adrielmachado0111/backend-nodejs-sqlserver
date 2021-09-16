@@ -1,0 +1,32 @@
+@api = http://localhost:4000/products
+### Listar productos
+GET {{api}}
+
+### mandar productos (objeto)
+POST {{api}}
+Content-Type: application/json
+
+{
+    "name": "ESP-32",
+    "description": "Microcontroller wifi + bluetooth",
+    "quantity": 1000
+}
+
+### total de productos en la base de datos
+GET {{api}}/count
+
+### obtener producto por id
+GET {{api}}/7
+
+### eliminar producto por id
+DELETE {{api}}/4
+
+### actualizar un producto
+PUT {{api}}/7
+Content-Type: application/json
+
+{
+    "name": "Laptop HP",
+    "description": "PC gaming",
+    "quantity": 300
+}
